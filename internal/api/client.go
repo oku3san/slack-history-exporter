@@ -179,16 +179,16 @@ func (c *Client) getUserName(userID string) string {
 // parseTimestamp はSlackのタイムスタンプをtime.Timeに変換します
 func parseTimestamp(timestamp string) (time.Time, error) {
 	// Slackのタイムスタンプは "1234567890.123456" の形式
-	sec := int64(0)
-	nsec := int64(0)
+	var sec float64
 
-	_, err := fmt.Sscanf(timestamp, "%d.%d", &sec, &nsec)
+	_, err := fmt.Sscanf(timestamp, "%f", &sec)
 	if err != nil {
 		return time.Time{}, errors.Wrap(err, "タイムスタンプのフォーマットが不正です")
 	}
 
-	// ナノ秒に変換
-	nsec = nsec * 1000000
+	// 整数部分のみを使用して時間を作成
+	secInt := int64(sec)
+	nsec := int64((sec - float64(secInt)) * 1e9)
 
-	return time.Unix(sec, nsec), nil
+	return time.Unix(secInt, nsec), nil
 }

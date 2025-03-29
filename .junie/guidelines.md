@@ -5,3 +5,4 @@
 - README は日本語で記載してください
 - go test を利用してください
 - task runner は MAKEFILE を利用してください
+- TDD で開発に取り組んでください
