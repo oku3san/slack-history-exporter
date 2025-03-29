@@ -6,13 +6,13 @@ import (
 
 // Message はSlackのメッセージを表す構造体です
 type Message struct {
-	MessageID    string       `json:"message_id"`
-	User         string       `json:"user"`
-	UserName     string       `json:"user_name"`
-	Text         string       `json:"text"`
-	Timestamp    time.Time    `json:"timestamp"`
-	Reactions    []Reaction   `json:"reactions,omitempty"`
-	ThreadReplies []Message   `json:"thread_replies,omitempty"`
+	MessageID     string     `json:"message_id"`
+	User          string     `json:"user"`
+	UserName      string     `json:"user_name"`
+	Text          string     `json:"text"`
+	Timestamp     time.Time  `json:"timestamp"`
+	Reactions     []Reaction `json:"reactions,omitempty"`
+	ThreadReplies []Message  `json:"thread_replies,omitempty"`
 }
 
 // Reaction はメッセージに対するリアクションを表す構造体です
