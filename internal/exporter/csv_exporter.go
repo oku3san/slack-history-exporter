@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/oku3san/slack-history-exporter/internal/models"
+	"github.com/pkg/errors"
 )
 
 // CSVExporter はCSVフォーマットでのエクスポートを行います
