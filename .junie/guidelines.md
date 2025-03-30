@@ -6,3 +6,4 @@
 - go test を利用してください
 - task runner は MAKEFILE を利用してください
 - TDD で開発に取り組んでください
+- go style guide に従ってください
