@@ -81,7 +81,3 @@ export SLACK_TOKEN="xoxp-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxxx"
 3. 変更をコミットする (`git commit -m 'Add some amazing feature'`)
 4. ブランチにプッシュする (`git push origin feature/amazing-feature`)
 5. プルリクエストを作成する
-
-## ライセンス
-
-このプロジェクトはMITライセンスの下で公開されています。詳細は[LICENSE](LICENSE)ファイルを参照してください。
